@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Shoes Shop</title>
-    <link rel="stylesheet" href="style.css">
+<!--    <link rel="stylesheet" href="style.css">-->
     <link rel="icon" href="img/nike.svg">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
@@ -16,11 +16,10 @@
             </div>
             <nav>
                 <div class="nav">
-                    <a href="#slider-frame">HOME</a>
+                    <a href="#slider">HOME</a>
                     <a href="#about_us">ABOUT US</a>
                     <a href="#our_products">OUR PRODUCTS</a>
                     <a href="#testimonials">TESTIMONIALS</a>
-                    <a href="#nav" id="cart" class="icon">&#128722;</a>
                 </div>
             </nav>
         </div>
@@ -29,10 +28,18 @@
         <div class="container">
             <div class="slider">
                 <ul id="slider">
-                    <li><img src="img/Air%20Max%20Plus.jpg" alt="" /></li>
-                    <li><img src="img/Adapt%20BD.jpg" alt="" /></li>
-                    <li><img src="img/Space%20Hippie.jpg" alt="" /></li>
-                    <li><img src="img/Shox%20Gravity.jpg" alt="" /></li>
+                    <li>
+                        <img alt="Air Max Plus" class="lazy" src="img/Air%20Max%20Plus.jpg">
+                    </li>
+                    <li>
+                        <img alt="Adapt BD" class="lazy" src="img/Adapt%20BD.jpg">
+                    </li>
+                    <li>
+                        <img alt="Shox Gravity" class="lazy" src="img/Shox%20Gravity.jpg">
+                    </li>
+                    <li>
+                        <img alt="Space Hippie" class="lazy" src="img/Space%20Hippie.jpg">
+                    </li>
                 </ul>
 
                 <ul id="dots">
@@ -63,9 +70,17 @@
                 </div>
             </div>
             <div class="our_products" id="our_products">
+                <h1>OUR PRODUCTS</h1>
                 <div class="shoes">
                     <div class="shoes_img _anim_item left">
-                        <img src="img/Air_Max_Plus.png" alt="Air Max Plus">
+                        <img
+                                alt="Air_Max_Plus"
+                                class="lazy"
+                                data-src="img/Air_Max_Plus.png"
+                                data-srcset="img/Air_Max_Plus_400.png 400w,
+                                         img/Air_Max_Plus_800.png 800w"
+                                sizes="100w"
+                        />
                     </div>
                     <div class="shoes_text">
                         <h2>Air Max Plus</h2>
@@ -94,12 +109,26 @@
                         </div>
                     </div>
                     <div class="shoes_img _anim_item right">
-                        <img src="img/Adapt_BD.png" alt="Air Max Plus">
+                        <img
+                                alt="Adapt_BD"
+                                class="lazy"
+                                data-src="img/Adapt_BD.png"
+                                data-srcset="img/Adapt_BD_400.png 400w,
+                                         img/Adapt_BD_800.png 800w"
+                                sizes="100w"
+                        />
                     </div>
                 </div>
                 <div class="shoes">
                     <div class="shoes_img _anim_item left">
-                        <img src="img/Shox_Gravity.png" alt="Air Max Plus">
+                        <img
+                                alt="Shox_Gravity"
+                                class="lazy"
+                                data-src="img/Shox_Gravity.png"
+                                data-srcset="img/Shox_Gravity_400.png 400w,
+                                     img/Shox_Gravity_800.png 800w"
+                                sizes="100w"
+                        />
                     </div>
                     <div class="shoes_text">
                         <h2>Shox Gravity</h2>
@@ -127,8 +156,15 @@
                             </div>
                         </div>
                     </div>
-                    <div class="shoes_img _anim_item right">
-                        <img src="img/Space%20Hippie.png" alt="Air Max Plus">
+                    <div class="shoes_img _anim_item right" id="SpaceHippie">
+                        <img
+                                alt="Space_Hippie"
+                                class="lazy"
+                                data-src="img/Space_Hippie.png"
+                                data-srcset="img/Space_Hippie_400.png 400w,
+                                     img/Space_Hippie_800.png 800w"
+                                sizes="100w"
+                        />
                     </div>
                 </div>
             </div>
@@ -311,11 +347,14 @@
         </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="js/validation.js"></script>
-    <script src="js/popup.js"></script>
-    <script src="js/scroll.js"></script>
-    <script src="js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" async></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" async></script>
+    <script src="js/validation.js" async></script>
+    <script src="js/popup.js" async></script>
+    <script src="js/scroll.js" async></script>
+    <script src="js/script.js" async></script>
+    <script src="js/lazyload.js" async></script>
+    <script src="js/loadCSS.js" async></script>
+    <script src="js/css.js" async></script>
 </body>
 </html>

@@ -508,3 +508,7 @@ footer .footer p {
   background: #1f2625;
   display: none;
 }
+
+#SpaceHippie{
+  transform: scale(-1, 1);
+}
